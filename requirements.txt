@@ -1,0 +1,9 @@
+fastapi
+sqlalchemy
+pyodbc
+requests
+httpx
+schedule
+uvicorn[standard]
+pydantic
+httpx
