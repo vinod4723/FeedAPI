@@ -12,6 +12,7 @@ python --version
 ```
 ### create a folder and open that folder into editor.
 ### create folder structure as below.
+```
 FeedAPI/
 │
 ├── .venv/
@@ -36,6 +37,7 @@ FeedAPI/
 ├── .env
 ├── .gitignore
 └── README.md
+```
 ### Create Requirements.txt file and add below libraries
 ````
 fastapi
