@@ -17,3 +17,30 @@ pip install pytest pytest-cov
 ```
 pip install sqlalchemy pyodbc python-dotenv
 ```
+### Write the code to configure the API
+```
+-- add the below code inAPI class
+from fastapi import APIRouter, Depends
+router = APIRouter()
+
+@router.get("/getEmployees/{emp_id}")
+def get_employee(emp_id: int,db: Session = Depends(get_db)):
+    employee = get_all_employees(db, emp_id)
+    return employee
+    
+-- register above class into main.py
+from fastapi import FastAPI
+from app.api.routes import router as api_router
+
+app.include_router(api_router, prefix="/api")
+
+'Default route '
+@app.get("/")
+def root():
+    return {"message": "Backend Automation API is running!"}
+```
+
+### now to run the application , execute the below command
+```
+uvicorn app.main:app --reload  
+```
