@@ -1,3 +1,41 @@
+1. Install Python (Use Latest Stable)
+
+Visit: https://www.python.org/downloads/
+
+As of 2025, Python 3.12 or 3.13 is recommended.
+
+On Windows: ✅ Check “Add Python to PATH” during install.
+
+Verify:
+```
+python --version
+```
+### create a folder and open that folder into editor.
+### create folder structure as below.
+FeedAPI/
+│
+├── .venv/
+├── app/
+│   ├── __init__.py
+│   ├── main.py          # FastAPI entrypoint
+│   ├── api/
+│   │   └── routes.py
+│   ├── db/
+        └── database.py
+│   │   └── models.py
+│   ├── services/
+│   │  
+│   ├── utils/
+│       └── helpers.py
+│
+├── automation/
+│
+├── tests/
+│   └── test_api.py
+├── requirements.txt
+├── .env
+├── .gitignore
+└── README.md
 ### Create Requirements.txt file and add below libraries
 ````
 fastapi
